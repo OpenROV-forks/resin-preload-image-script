@@ -89,6 +89,8 @@ mkdir -p "/mnt/$APP_ID"
 # amke sure directory exists before mounting to it
 sync
 sleep 2
+ls -la /dev/${LOOP_DEV}*
+ls -la /mnt
 mount -t btrfs -o nospace_cache "${LOOP_DEV}p6" "/mnt/$APP_ID"
 
 # Resize partition's filesystem
