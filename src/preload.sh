@@ -206,8 +206,8 @@ function get_resin_os_version() {
 
 # Usage: expand_image <image_path>
 function expand_image() {
-    # Size will be increased by 110% of container size
-    IMAGE_ADD_SPACE=$(($CONTAINER_SIZE * 110 / 100))
+    # Size will be increased by 130% of container size
+    IMAGE_ADD_SPACE=$(($CONTAINER_SIZE * 130 / 100))
     log "Expanding image by" $IMAGE_ADD_SPACE "MB"
     # Add zero bytes to image to be able to resize partitions
     dd if=/dev/zero bs=1M count="$IMAGE_ADD_SPACE" >> "$IMAGE"
